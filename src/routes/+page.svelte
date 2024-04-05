@@ -68,7 +68,7 @@
         tabindex="0"
         on:mouseenter={() => pfp_focus = true}
         on:mouseleave={() => pfp_focus = false}
-        class="group/pfp hover:z-10 bg-zinc-700/20 border border-zinc-600/50 p-4 rounded-2xl backdrop-blur-[2px]">
+        class="group/pfp {intro ? 'z-10' : ''} bg-zinc-700/20 border border-zinc-600/50 p-4 rounded-2xl backdrop-blur-[2px]">
         <!-- Bot card -->
         <div 
             class="relative bg-zinc-800 rounded-xl border border-zinc-800 overflow-hidden transition duration-300 xs:group-hover/pfp:scale-110 md:group-hover/pfp:scale-125 xl:group-hover/pfp:translate-x-20">
