@@ -178,7 +178,7 @@
         <!-- Chat -->
         <div class="mt-auto mb-4 px-2">
             <div class="flex gap-2">
-                <img src="/assets/pfp.jpg" alt="" class="w-12 h-12 rounded-full" />
+                <img src="/assets/pfp.gif" alt="" class="w-12 h-12 rounded-full" />
                 <div>
                     <h1 class="font-semibold">{config.name} <span class="text-zinc-400 text-xs">Today at {new Date().getHours()}:{new Date().getSeconds()}</span></h1>
                     <p>
