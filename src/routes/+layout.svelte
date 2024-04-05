@@ -6,6 +6,8 @@
 <head>
     <title>{config.name}</title>
     <meta name="description" content="{config.short_description}">
+    <meta name="og:card" content="summary">
+    <meta name="og:image" content="/assets/pfp.gif">
 </head>
 
 <body class="h-screen bg-zinc-900">
