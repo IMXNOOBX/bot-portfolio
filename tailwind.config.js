@@ -12,7 +12,29 @@ export default {
       },
       rotate: {
         full: '360deg',
-      }
+      },
+      transitionProperty: {
+        'width': 'width',
+      },
+      animation: {
+        'fade-in': 'fadeIn 2s ease-out 1s',
+        show: 'show 1s ease-in-out both',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        screen: {
+          '0%': { opacity: '0' },
+          '30%': { opacity: '1' },
+          '80%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        },
+      },
+      screens: {
+        'xs': '390px',
+      },
     },
   },
   plugins: [],
