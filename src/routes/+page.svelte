@@ -156,7 +156,7 @@
      </div>
 
 
-     <!-- Bot commands and their description -->
+     <!-- Bot commands and their description --> 
      <div class="flex flex-col bg-zinc-600/20 border border-zinc-500/50 p-4 rounded-2xl backdrop-blur-[2px] h-full xl:col-span-2 min-h-96 overflow-hidden">
         <div class="flex">
             <h1 class="font-bold">Showcase</h1>
@@ -190,9 +190,23 @@
                             <img src="/assets/arrow.svg" alt="" class="inline-flex fill-blue-400 h-4 w-4 ml-1 transform duration-300 group-hover:translate-x-5">
                         </button>
                     </p>
-                    <p class="">
+                    <p>
                         Tip, write <span class="text-zinc-400 font-semibold">{slashcmd ? '/' : '!'}</span> to see all the commands available
                     </p>
+                    <p class="text-zinc-300">
+                        Help me by upvoting me on these platforms:
+                    </p>
+                    {#each config.upvote as upvote}
+                        <p class="pl-2">
+                            - 
+                            <button 
+                                on:click={() => open(upvote.url, '_blank')}
+                                class="group inline-flex items-center transform duration-300 hover:translate-x-2 text-blue-400 font-semibold italic hover:underline">
+                                {upvote.name}
+                                <img src="/assets/arrow.svg" alt="" class="inline-flex fill-blue-400 h-4 w-4 ml-1 transform duration-300 group-hover:translate-x-5">
+                            </button>
+                        </p>
+                    {/each}
                 </div>
             </div>
         </div>
