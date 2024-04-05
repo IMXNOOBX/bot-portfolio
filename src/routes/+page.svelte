@@ -36,7 +36,7 @@
         <button 
             on:click={() => {
                 intro = true;
-                // localStorage.setItem('intro', intro.toString());
+                localStorage.setItem('intro', intro.toString());
                 setTimeout(() => {
                     skip_intro = true;
                 }, 1000);
@@ -159,7 +159,7 @@
      <!-- Bot commands and their description -->
      <div class="flex flex-col bg-zinc-600/20 border border-zinc-500/50 p-4 rounded-2xl backdrop-blur-[2px] h-full xl:col-span-2 min-h-96 overflow-hidden">
         <div class="flex">
-            <h1 class="font-bold">Not A Playground</h1>
+            <h1 class="font-bold">Showcase</h1>
             <button class="ml-auto bg-zinc-800/50 border border-zinc-800 rounded-lg flex" on:click="{() => {slashcmd = !slashcmd}}">
                 <div class="transition duration-300 border rounded-lg px-2 {slashcmd ? 'bg-zinc-600/50 border-zinc-600 -translate-x-2' : 'bg-zinc-600/0 border-zinc-600/0 translate-x-2 opacity-50'}">Slash</div>
                 <div class="transition duration-300 border rounded-lg px-2 {!slashcmd ? 'bg-zinc-600/50 border-zinc-600 translate-x-2' : 'bg-zinc-600/0 border-zinc-600/0 -translate-x-2 opacity-50'}">Chat</div>
@@ -189,6 +189,9 @@
                             Inviting Me 
                             <img src="/assets/arrow.svg" alt="" class="inline-flex fill-blue-400 h-4 w-4 ml-1 transform duration-300 group-hover:translate-x-5">
                         </button>
+                    </p>
+                    <p class="">
+                        Tip, write <span class="text-zinc-400 font-semibold">{slashcmd ? '/' : '!'}</span> to see all the commands available
                     </p>
                 </div>
             </div>
