@@ -22,5 +22,10 @@ export default {
         { name: 'remove', type: 'slash/chat', description: 'Removes an emoji from the server.' },
         { name: 'Add avatar as emoji', type: 'user', description: 'Creates an emoji from the users avatar' },
         { name: 'steal', type: 'any', description: 'Allows you to steal any emoji and copy it to your server with two simple clicks' },
+    ],
+    upvote: [
+        { name: 'top.gg/emoteuniverse', url: 'https://top.gg/bot/1070301658946490451' },
+        { name: 'discordbotlist.com/eu', url: 'https://discordbotlist.com/bots/emoteuniverse' },
+        { name: 'discords.com/emoteuniverse', url: 'https://discords.com/bots/bot/1070301658946490451' },
     ]
 };
