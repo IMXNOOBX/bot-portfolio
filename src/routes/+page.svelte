@@ -75,12 +75,12 @@
             <!-- profile picture and banner -->
             <div>
                 <img 
-                    src="/assets/banner.jpg" 
+                    src="/assets/banner.gif" 
                     alt="banner" 
                     class="h-32 w-full object-cover" 
                 >
                 <img 
-                    src="/assets/pfp.jpg" 
+                    src="/assets/pfp.gif" 
                     alt="avatar" 
                     class="absolute top-20 left-2 h-20 w-20 rounded-full border-4 border-zinc-800/80" 
                 >
