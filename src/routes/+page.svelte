@@ -9,11 +9,13 @@
     let foundcmd = false;
     let pfp_focus = false;
     let hover_aknowledged = false;
+    let chat_aknowledged = false;
 
     let input_text = '';
     
     let results = config.commands;
 
+    $: chat_aknowledged = input_text.startsWith((slashcmd ? '/' : '!')) ? true : chat_aknowledged;
     $: hover_aknowledged = pfp_focus ? true : hover_aknowledged;
     $: foundcmd = results.length == 1 && results[0].name.toLowerCase() == input_text.slice(1).toLowerCase();
 
@@ -213,6 +215,11 @@
 
         <!-- Message bar -->
         <div class="">
+            {#if !chat_aknowledged}
+                <div class="absolute bg-zinc-700/50 border border-gray-500 rounded-md text-xs font-semibold px-2 animate-pulse bottom-12 left-20">
+                    Write {slashcmd ? '/' : '!'} to see all the commands available
+                </div>
+            {/if}
             <div class="absolute bottom-14 left-2 w-[96%] bg-zinc-800 border border-zinc-700 py-1 px-2 mx-2 mb-2 rounded-xl overflow-auto max-h-60 {results.length == 0 || foundcmd ? 'hidden' : 'block'}">
                 {#each results as command}
                     <button class="block w-full text-left hover:bg-zinc-700/50 focus:border outline-none rounded-lg px-1 select-none cursor-pointer" on:click={() => input_text = (slashcmd ? '/' : '!') + command.name}>
