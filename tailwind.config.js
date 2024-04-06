@@ -35,6 +35,9 @@ export default {
       screens: {
         'xs': '390px',
       },
+      minHeight: {
+        'chat': '600px',
+      },
     },
   },
   plugins: [],

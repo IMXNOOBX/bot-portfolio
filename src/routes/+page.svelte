@@ -19,6 +19,17 @@
     $: hover_aknowledged = pfp_focus ? true : hover_aknowledged;
     $: foundcmd = results.length == 1 && results[0].name.toLowerCase() == input_text.slice(1).toLowerCase();
 
+    /**
+     * @brief Open the invite link in a new window if the user types /invite
+    */
+    $: if (input_text.slice(1).toLowerCase() == 'invite') {
+        open(
+            config.invite, 
+            '_blank', 
+            `popup,width=500,height=600,left=${screen.width / 2 - 250},top=${screen.height / 2 - 300}`
+        )
+    }
+
     $: results = config.commands.filter(command => {
         if (!input_text.startsWith((slashcmd ? '/' : '!')))
             return false;
@@ -34,7 +45,7 @@
 </script>
 
 {#if !skip_intro}
-    <div class="absolute z-10 w-full h-full backdrop-blur-lg transition delay-200 duration-700 {intro ? '-translate-y-full' : ''}">
+    <div class="absolute z-20 w-full h-full backdrop-blur-lg transition delay-200 duration-700 {intro ? '-translate-y-full' : ''}">
         <button 
             on:click={() => {
                 intro = true;
@@ -43,9 +54,9 @@
                     skip_intro = true;
                 }, 1000);
             }}
-            class="flex flex-col w-full h-full bg-zinc-800/50 items-center justify-center animate-fade-in cursor-pointer"
+            class="flex flex-col w-full h-full bg-zinc-800/50 items-center justify-center animate-fade-in cursor-pointer px-2"
             >
-                <h1 class="text-6xl text-white transition duration-200 {intro ? '-translate-y-10' : ''}">{config.name}</h1>
+                <h1 class="text-5xl xl:text-6xl text-white transition duration-200 {intro ? '-translate-y-10' : ''}">{config.name}</h1>
                 <h2 class="text-zinc-400 transition duration-300 {intro ? '-translate-y-10' : ''}">Welcome to my universe of emotes, explore my commands and learn about me</h2>
     
                 <span class="text-zinc-600 text-sm mt-10 animate-pulse {intro ? 'opacity-0' : ''}">Click anywhere to continue</span>
@@ -60,10 +71,10 @@
 </div>
 
 <!-- Profile focus effect -->
-<div class="absolute h-screen w-screen bg-zinc-900/70 transition duration-300 {pfp_focus ? "opacity-100 z-10" : "opacity-0"}"/>
+<div class="hidden sm:block overflow-hidden absolute h-screen w-screen bg-zinc-900/70 transition duration-300 {pfp_focus ? "opacity-100 z-10" : "opacity-0"}"/>
 
 <!-- Main content -->
-<main class="text-white grid grid-flow-row p-5 xs:p-10 md:px-32 md:py-20 xl:p-40 xl:grid-flow-col xl:auto-rows-fr xl:grid-cols-3 h-full w-full items-center justify-center gap-4">
+<main class="text-white grid grid-flow-row p-5 xs:p-10 md:px-32 md:py-20 xl:p-40 xl:grid-flow-col xl:auto-rows-fr xl:grid-cols-3 h-full w-full items-center justify-center gap-4 overflow-x-hidden">
     <!-- Bot Profile, similar to the discord one -->
      <div 
         role="button"
@@ -159,7 +170,7 @@
 
 
      <!-- Bot commands and their description --> 
-     <div class="flex flex-col bg-zinc-600/20 border border-zinc-500/50 p-4 rounded-2xl backdrop-blur-[2px] h-full xl:col-span-2 min-h-96 overflow-hidden">
+     <div class="flex flex-col bg-zinc-600/20 border border-zinc-500/50 p-4 rounded-2xl backdrop-blur-[2px] h-full xl:col-span-2 min-h-chat overflow-hidden">
         <div class="flex">
             <h1 class="font-bold">Showcase</h1>
             <button class="ml-auto bg-zinc-800/50 border border-zinc-800 rounded-lg flex" on:click="{() => {slashcmd = !slashcmd}}">
@@ -216,7 +227,7 @@
         <!-- Message bar -->
         <div class="">
             {#if !chat_aknowledged}
-                <div class="absolute bg-zinc-700/50 border border-gray-500 rounded-md text-xs font-semibold px-2 animate-pulse bottom-12 left-20">
+                <div class="absolute bg-zinc-700/50 border border-gray-500 rounded-md text-xs font-semibold px-2 animate-pulse bottom-12 left-10 sm:left-20">
                     Write {slashcmd ? '/' : '!'} to see all the commands available
                 </div>
             {/if}
