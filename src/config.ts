@@ -6,9 +6,9 @@ export default {
     support: 'https://discord.gg/m68Nfgyb4m',
     tags: ['emoji', 'emote', 'manager', 'utility'],
     short_description: 
-        'Great and simple to use emote manager bot. I stands out for been reliable, efficient, and integrated with the latest discord features.',
+        'Great and simple to use emote manager bot. I stand out for been reliable, efficient, and integrated with the latest discord features.',
     large_description: 
-        'EmoteUniverse is an emoji manager bot that allows users to upload, manage, and delete custom emojis, and export them to create different emoji packs. \
+        'EmoteUniverse is an emoji manager bot that allows users to upload, manage, delete, and export custom emojis to create different emoji packs with ease. \
          The bot also provides functionalities to non nitro users as it will convert messages with non animated emojis into animated ones. \
          It also integrates the latest discord updates and now it can be used anywhere, such as in direct messages, group chats and even servers the bot is not in.',
     commands: [
