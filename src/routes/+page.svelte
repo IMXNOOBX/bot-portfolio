@@ -162,6 +162,18 @@
                         <span class="text-mx font-extrabold">DESCRIPTION</span>
                         <p class="text-xs">{config.large_description}</p>
                     </div>
+                    <div class="flex mt-2 gap-2">
+                        <a 
+                            class="text-mx lowercase rounded-md bg-zinc-700/50 border border-zinc-600 px-1 transition duration-300 hover:bg-zinc-600/50 hover:border-zinc-500" 
+                            href="/terms-of-service">
+                            Terms-Of-Service
+                        </a>
+                        <a 
+                            class="text-mx lowercase rounded-md bg-zinc-700/50 border border-zinc-600 px-1 transition duration-300 hover:bg-zinc-600/50 hover:border-zinc-500" 
+                            href="/privacy-policy">
+                            Privacy-Policy
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -231,7 +243,7 @@
                     Write {slashcmd ? '/' : '!'} to see all the commands available
                 </div>
             {/if}
-            <div class="absolute bottom-14 left-2 w-[96%] bg-zinc-800 border border-zinc-700 py-1 px-2 mx-2 mb-2 rounded-xl overflow-auto max-h-60 {results.length == 0 || foundcmd ? 'hidden' : 'block'}">
+            <div class="absolute bottom-14 left-0 xs:left-2 w-[96%] bg-zinc-800 border border-zinc-700 py-1 px-2 mx-2 mb-2 rounded-xl overflow-auto max-h-60 {results.length == 0 || foundcmd ? 'hidden' : 'block'}">
                 {#each results as command}
                     <button class="block w-full text-left hover:bg-zinc-700/50 focus:border outline-none rounded-lg px-1 select-none cursor-pointer" on:click={() => input_text = (slashcmd ? '/' : '!') + command.name}>
                         

@@ -1,5 +1,4 @@
-<script>
-    import { page } from '$app/stores';
-  </script>
-  
-<h1>{$page.status}: {$page.error?.message}</h1>
+<svelte:head>
+    <title>404 Not Found</title>
+    <meta http-equiv="refresh" content="0; URL=/" />
+</svelte:head>
