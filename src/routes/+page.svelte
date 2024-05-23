@@ -152,7 +152,7 @@
                     <h1 class="text-lg font-bold">{config.name}</h1>
                     <div class="flex gap-1 items-center">
                         <h2 class="text-sm text-zinc-300">{config.tag}</h2>
-                        <span class="px-1 bg-blue-500 text-ms rounded-xs">BOT</span>
+                        <span class="px-1 bg-blue-500 text-ms rounded-xs flex">✓ APP</span>
                     </div>
                     <div class="mt-2">
                         <span class="text-mx font-extrabold">ABOUT ME</span>
