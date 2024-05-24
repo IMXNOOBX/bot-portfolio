@@ -21,6 +21,12 @@ npm run build
 ```
 > The build will be in the `build` folder and will be statically generated.
 
+* Docker
+```bash
+docker build -t bot-portfolio .
+docker run -d -p 80:80 bot-portfolio
+```
+
 # 🔖 License & Copyright
 
 This project is licensed under [**CC BY-NC 4.0**](https://creativecommons.org/licenses/by-nc/4.0/).
