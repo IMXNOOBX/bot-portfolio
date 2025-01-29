@@ -1,6 +1,6 @@
 export default {
     title: "Privacy Policy",
-    description: "{bot_name} is a Discord bot designed to help manage emojis within Discord servers. This privacy policy outlines how {bot_name} ensures user privacy and will be refered as 'the bot'.",
+    description: "{bot_name} is a Discord bot designed to help manage emojis within Discord servers. This privacy policy outlines how {bot_name} ensures user privacy and will be referred as 'the bot'.",
     sections: [
       {
         "title": "Data Collection and Usage",

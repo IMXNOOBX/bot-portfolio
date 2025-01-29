@@ -4,7 +4,7 @@ export default {
     prefix: '/ or !',
     invite: 'https://discord.com/oauth2/authorize?client_id=1070301658946490451',
     support: 'https://discord.gg/m68Nfgyb4m',
-    tags: ['emoji', 'emote', 'manager', 'utility'],
+    tags: ['emoji', 'emote', 'manager', 'utility', 'discord', 'noob bot', 'emogis', 'emote manager', 'emote universe', 'universe'],
     short_description: 
         'Great and simple to use emote manager bot. I stand out for being reliable, efficient, and integrated with the latest discord features.',
     large_description: 
@@ -12,11 +12,11 @@ export default {
          The bot also provides functionalities to non-Nitro users as it will convert messages with non animated emojis into animated ones. \
          Additionally, it integrates the latest Discord updates, and now it can be used anywhere, such as in direct messages, group chats and even servers the bot is not in.',
     commands: [
-        { name: 'help', type: 'slash/chat', description: 'Show the help embed with all comand list and their help description' },
+        { name: 'help', type: 'slash/chat', description: 'Show the help embed with all command list and their help description' },
         { name: 'invite', type: 'slash/chat', description: 'Generates an invite link for you to invite the bot or join the support server.' },
-        { name: 'status', type: 'slash/chat', description: 'Collets information about the hosting and conection status to discords sockets.' },
+        { name: 'status', type: 'slash/chat', description: 'Collets information about the hosting and connection status to discords sockets.' },
         { name: 'add', type: 'slash/chat', description: 'Imports an external emoji to your server.' },
-        { name: 'export', type: 'slash/chat', description: 'Feches all the emojis to export to another server.' },
+        { name: 'export', type: 'slash/chat', description: 'Fetches all the emojis to export to another server.' },
         { name: 'import', type: 'slash/chat', description: 'Imports all the emogis from another server.' },
         { name: 'list', type: 'slash/chat', description: 'Displays a list of all current emojis.' },
         { name: 'remove', type: 'slash/chat', description: 'Removes an emoji from the server.' },

@@ -6,6 +6,7 @@
 <head>
     <title>{config.name}</title>
     <meta name="description" content="{config.short_description}">
+    <meta name="tags" content="{config.tags.join(", ")}">
     <meta name="og:card" content="summary">
     <meta name="og:image" content="/assets/pfp.gif">
 </head>
